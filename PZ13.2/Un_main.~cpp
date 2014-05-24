@@ -12,17 +12,44 @@ TForm1 *Form1;
 __fastcall TForm1::TForm1(TComponent* Owner)
         : TForm(Owner)
 {
+        Max_edit->Left = 0;
+        Max_edit->Width = ClientWidth;
+        Resize(Max_edit);
+        Resize(GroupBox1);
+        Resize(Lbl_output);
         Resize(this);
 }
 
 void TForm1::Resize(TControl* c) {
         static bool a = false;
-        double kx = 1920 / Screen->Width;
-        double ky = 1080 / Screen->Height;
+        double kx = 1920.0 / Screen->Width;
+        double ky = 1200.0 / Screen->Height;
         if(!a)
            Font->Height /= ky;
         a = true;
 
 }
 //---------------------------------------------------------------------------
- 
+
+void __fastcall TForm1::CheckBox1Click(TObject *Sender)
+{
+        if(CheckBox1->Checked)
+                Lbl_output->Font->Style = Lbl_output->Font->Style<<fsBold;
+        else
+                Lbl_output->Font->Style = Lbl_output->Font->Style>>fsBold;
+}
+
+//---------------------------------------------------------------------------
+void __fastcall TForm1::CheckBox2Click(TObject *Sender)
+{
+        if(CheckBox1->Checked)
+                Lbl_output->Font->Style = Lbl_output->Font->Style<<fsItalic;
+        else
+                Lbl_output->Font->Style = Lbl_output->Font->Style>>fsItalic;
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::Btn_setClick(TObject *Sender)
+{
+        Lbl_output->Caption = Max_edit->Text;
+}
+//---------------------------------------------------------------------------

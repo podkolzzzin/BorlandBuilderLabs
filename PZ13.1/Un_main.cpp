@@ -17,15 +17,22 @@ __fastcall TForm1::TForm1(TComponent* Owner)
         Resize(Max_edit);
         Resize(GroupBox1);
         Resize(Lbl_output);
+        Resize(CheckBox1);
+        Resize(CheckBox2);
         Resize(this);
 }
 
-void TForm1::Resize(TControl* c) {
+void TForm1::Resize(TControl* cnt) {
         static bool a = false;
         double kx = 1920.0 / Screen->Width;
         double ky = 1200.0 / Screen->Height;
         if(!a)
            Font->Height /= ky;
+
+        cnt->Width /= kx;
+        cnt->Height /= ky;
+        cnt->Left /= kx;
+        cnt->Top /= ky;
         a = true;
 
 }

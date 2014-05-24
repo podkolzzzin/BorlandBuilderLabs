@@ -4,12 +4,12 @@
   <MACROS>
     <VERSION value="BCB.06.00"/>
     <PROJECT value="Pr_main.exe"/>
-    <OBJFILES value="Pr_main.obj Un_main.obj Un_additional.obj"/>
+    <OBJFILES value="Pr_main.obj Un_main.obj"/>
     <RESFILES value="Pr_main.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
     <DEFFILE value=""/>
-    <RESDEPEN value="$(RESFILES) Un_main.dfm Un_additional.dfm"/>
+    <RESDEPEN value="$(RESFILES) Un_main.dfm"/>
     <LIBFILES value=""/>
     <LIBRARIES value=""/>
     <SPARELIBS value="vcl.lib rtl.lib"/>
@@ -57,7 +57,6 @@
       <FILE FILENAME="Pr_main.res" FORMNAME="" UNITNAME="Pr_main.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="Pr_main.cpp" FORMNAME="" UNITNAME="Pr_main" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="Un_main.cpp" FORMNAME="Form1" UNITNAME="Un_main" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
-      <FILE FILENAME="Un_additional.cpp" FORMNAME="Form2" UNITNAME="Un_additional" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
   </FILELIST>
   <BUILDTOOLS>
   </BUILDTOOLS>
