@@ -1,27 +1,27 @@
 //---------------------------------------------------------------------------
 
-#ifndef Un_additionalH
-#define Un_additionalH
+#ifndef Un_mainH
+#define Un_mainH
 //---------------------------------------------------------------------------
 #include <Classes.hpp>
 #include <Controls.hpp>
 #include <StdCtrls.hpp>
 #include <Forms.hpp>
 //---------------------------------------------------------------------------
-class TForm2 : public TForm
+class TForm1 : public TForm
 {
 __published:	// IDE-managed Components
-        TEdit *Max_edit;
+        TEdit *Edit_max;
+        TLabel *Lbl_words;
         TLabel *Lbl_output;
-        TLabel *Lbl_repeats;
-        TButton *Button1;
-        void __fastcall Button1Click(TObject *Sender);
+        TButton *Btn_count;
+        void __fastcall Btn_countClick(TObject *Sender);
 private:	// User declarations
-void Resize(TControl* cnt) ;
+        void Resize(TControl*);
 public:		// User declarations
-        __fastcall TForm2(TComponent* Owner);
+        __fastcall TForm1(TComponent* Owner);
 };
 //---------------------------------------------------------------------------
-extern PACKAGE TForm2 *Form2;
+extern PACKAGE TForm1 *Form1;
 //---------------------------------------------------------------------------
 #endif

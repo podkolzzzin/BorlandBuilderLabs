@@ -4,10 +4,12 @@
 #pragma hdrstop
 
 #include "Un_main.h"
+#include "Un_additional.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
 TForm1 *Form1;
+
 //---------------------------------------------------------------------------
 __fastcall TForm1::TForm1(TComponent* Owner)
         : TForm(Owner)
@@ -36,7 +38,23 @@ void TForm1::Resize(TControl* cnt) {
         a = true;
 
 }
+
+void TForm1::Count(AnsiString &str)
+{
+        AnsiString temp = Max_edit->Text;
+        int count = 0;
+        int pos = temp.Pos(temp);
+        while(pos!=0)
+        {
+                count++;
+                temp = temp.SubString(pos+str.Length(), temp.Length() - pos);
+                pos = temp.Pos(str);
+        }
+        Form2->Lbl_output->Caption = IntToStr(count);
+}
 //---------------------------------------------------------------------------
+
+
 
 void __fastcall TForm1::CheckBox1Click(TObject *Sender)
 {

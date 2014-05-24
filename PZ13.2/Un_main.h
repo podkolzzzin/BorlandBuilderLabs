@@ -24,6 +24,7 @@ private:	// User declarations
         void Resize(TControl*);
 public:		// User declarations
         __fastcall TForm1(TComponent* Owner);
+        void Count(AnsiString &str);
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TForm1 *Form1;
