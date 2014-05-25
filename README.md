@@ -1,4 +1,4 @@
 BorlandBuilderLabs
 ==================
 
-Labs to borland FUCKING builder 6.0
+Labs for borland FUCKING builder 6.0
